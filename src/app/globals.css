@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-secondary-light;
+  @apply text-primary-light;
+}
+
+html.dark {
+  @apply bg-secondary-dark;
+  @apply text-primary-dark;
+}
+
+body {
+  @apply font-poppins;
+}
+
+h2 {
+  @apply text-4xl tracking-wider mb-6 text-center;
+}
+
+.clipped-text {
+  color: transparent;
+  background-image: url("https://images.pexels.com/photos/73873/star-clusters-rosette-nebula-star-galaxies-73873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: center;
+  background-size: cover;
+}
+
+@layer components {
+  .button-shadow-light {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  .button-shadow-dark {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
